@@ -1,10 +1,10 @@
-#Windows Message Helper
+# Windows Message Helper
 
 This library is useful for sending messages using SendMessage and PostMessage on C ++ / MFC based.
 You can easily attach various types of variables.
 
 
-##Define
+## Define
 ```
 	// Target Windows Name Definitions
 	#define WMH_TARGET_WND			_T("dialog")
@@ -13,7 +13,7 @@ You can easily attach various types of variables.
 	#define WMH_ID_TEST				WM_USER + 10
 ```
 
-##Create
+## Create
 ```
 	CWindowsMessageHelperThread* pWMHelperThread = static_cast<CWindowsMessageHelperThread*>(AfxBeginThread(RUNTIME_CLASS(CWindowsMessageHelperThread),THREAD_PRIORITY_HIGHEST,0,CREATE_SUSPENDED));
 	pWMHelperThread->AddTargetMsgWnd(WMH_TARGET_WND, (CWnd*)this);
@@ -21,7 +21,7 @@ You can easily attach various types of variables.
 	pWMHelperThread->SetSingleton(pWMHelperThread);
 ```
 
-##Delete
+## Delete
 ```
 	if(g_MessageHelper != nullptr)
 	{
@@ -30,7 +30,7 @@ You can easily attach various types of variables.
 	}
 ```
 ## Use
-###Sender
+### Sender
 ```
 	CWindowsMessage wmp(WMH_TARGET_WND, CWindowsMessage::eMSG_Type::eType_Post, WMH_ID_TEST);
 
@@ -59,7 +59,7 @@ You can easily attach various types of variables.
 	wmp.Execute(true);
 ```
 
-###Receive
+### Receive
 ```
 	.H
 	afx_msg LRESULT OnWindowsMessageHelperTest(WPARAM wParam, LPARAM lParam);
