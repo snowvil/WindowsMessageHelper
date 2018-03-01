@@ -1,9 +1,8 @@
-#pragma once
+// Copyright (c) 2018 snowvil84@gmail.com
+// Distributed under the MIT software license, see the accompanying
+// file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-// _USE_PARAM_STATUS_DEBUG_ 사용시 변수 입력 출력 및 디버깅 메세지를 출력한다. (동기화 코드 포함 ) 
-// 각쓰레드에서 파라메터 사용시 ViewParameterStatusToOutputDebugString를 콜 했을때 생길 수 있는 문제를 위해 동기화 
-// 테스트 종료시 항상 처리 할 것
-//#define _USE_PARAM_STATUS_DEBUG_
+#pragma once
 
 #include <map>
 #include <queue>
@@ -14,18 +13,6 @@
 using namespace std;
 using namespace chrono;
 
-/*!
- * \brief
- * 잡스케쥴러에서 사용되는 파라메터 클래스
- * 
- * 잡스케쥴러에서 GetUserCustomParameter() 로 호출하여 사용되며 메세지 받는 윈도우에서 사용이 끝나면 항상 ResetData() 를 통해 초기화하여야한다.
- * 초기화 하지 않을 경우 Leak이 발생
- * \remarks
- * Write remarks for CWindowsMessageParameter here.
- * 
- * \see
- * Separate items with the '|' character.
- */
 class AFX_CLASS_EXPORT CWindowsMessageParameter final
 {
 public:

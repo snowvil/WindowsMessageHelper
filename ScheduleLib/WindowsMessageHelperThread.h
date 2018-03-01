@@ -1,8 +1,8 @@
+// Copyright (c) 2018 snowvil84@gmail.com
+// Distributed under the MIT software license, see the accompanying
+// file COPYING or http://www.opensource.org/licenses/mit-license.php.
+
 #pragma once
-
-// 파라메터 디버깅 용 - 파라메터 릭이 생기는 경우 활성화후 컴파일 하세요
-//#define _USE_PARAM_STATUS_DEBUG_ 1
-
 
 #include <afxmt.h>
 #include "Singleton.h"

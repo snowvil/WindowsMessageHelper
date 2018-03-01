@@ -1,5 +1,7 @@
+// Copyright (c) 2018 snowvil84@gmail.com
+// Distributed under the MIT software license, see the accompanying
+// file COPYING or http://www.opensource.org/licenses/mit-license.php.
 #pragma once
-
 
 // Foward Declarations
 class CWindowsMessageParameter;
